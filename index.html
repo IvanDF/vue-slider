@@ -19,7 +19,14 @@
     </header>
 
     <!-- SLIDER -->
-    <main id="slider">
+    <main id="slider"
+    @mouseenter="stopSlider"
+    @mouseleave="startSlider"
+
+    @keyup.arrow-left="prev"
+    @keyup.arrow-right="next"
+    tabindex="0"
+    >
 
         <!-- SLIDER BUTTONS -->
         <i @click="prev" class="left fas fa-chevron-left"></i>

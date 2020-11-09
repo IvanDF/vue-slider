@@ -14,7 +14,11 @@
             './img/image3.jpg',
             './img/image4.jpg',
         ],
-        active: 'active',
+        intervalId: 0,
+    },
+
+    created() {
+        this.startSlider()
     },
 
     methods: {
@@ -35,6 +39,15 @@
         navCircle( index ) {
             this.indexPhotos = index;
         },
+        startSlider() {
+            this.intervalId = setInterval(() => {
+                this.next()
+            }, 5000);
+        },
+        stopSlider() {
+            clearInterval(this.intervalId);
+        }
+        
     },
 
  });
