@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue Slider</title>
+    <!-- FONTAWESOME -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'/>
     <!-- MAIN STYLE -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- VUE -->
@@ -11,9 +13,34 @@
 </head>
 <body>
 
-    <div id="slider">
+    <!-- MAIN HEADER -->
+    <header class="main-header">
+        <h1>SLIDER</h1>
+    </header>
+
+    <!-- SLIDER -->
+    <main id="slider">
+
+        <!-- SLIDER BUTTONS -->
+        <div class="slider-buttons">
+            <i @click="prev" class="left fas fa-chevron-left"></i>
+            <i @click="next" class="right fas fa-chevron-right"></i>
+        </div>
+
+        <!-- SLIDER IMAGES -->
+        <div class="slider-images">
+            <img :src="photos[indexPhotos]" alt="">
+        </div>
         
-    </div>
+        <!-- SLIDER NAV -->
+        <div class="slider-nav">
+            <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i>
+        </div>
+    </main>
     
 
     <script src="./js/main.js"></script>
