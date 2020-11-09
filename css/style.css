@@ -83,4 +83,6 @@ body {
     cursor: pointer;
 }
 
-
+.slider-nav i.active {
+    color: #2d2;
+}

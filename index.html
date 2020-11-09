@@ -22,10 +22,8 @@
     <main id="slider">
 
         <!-- SLIDER BUTTONS -->
-        <div class="slider-buttons">
-            <i @click="prev" class="left fas fa-chevron-left"></i>
-            <i @click="next" class="right fas fa-chevron-right"></i>
-        </div>
+        <i @click="prev" class="left fas fa-chevron-left"></i>
+        <i @click="next" class="right fas fa-chevron-right"></i>
 
         <!-- SLIDER IMAGES -->
         <div class="slider-images">
@@ -34,11 +32,11 @@
         
         <!-- SLIDER NAV -->
         <div class="slider-nav">
-            <i class="fas fa-circle"></i>
-            <i class="fas fa-circle"></i>
-            <i class="fas fa-circle"></i>
-            <i class="fas fa-circle"></i>
-            <i class="fas fa-circle"></i>
+            <i 
+            v-for="( cirlce, index ) in photos" 
+            :class="[ 'fas fa-circle', index == indexPhotos ? 'active' : '' ]"
+            @click="navCircle(index)" 
+            ></i>
         </div>
     </main>
     

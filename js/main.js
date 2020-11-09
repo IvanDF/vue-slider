@@ -13,7 +13,8 @@
             './img/image2.jpg',
             './img/image3.jpg',
             './img/image4.jpg',
-        ]
+        ],
+        active: 'active',
     },
 
     methods: {
@@ -30,7 +31,10 @@
             if ( this.indexPhotos < 0 ) {
                 this.indexPhotos = this.photos.length - 1;
             };
-        }
+        },
+        navCircle( index ) {
+            this.indexPhotos = index;
+        },
     },
 
  });
